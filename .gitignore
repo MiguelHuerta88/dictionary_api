@@ -1,0 +1,6 @@
+/.vagrant
+/puphpet/config-custom.yaml
+/.idea/
+.env
+/_ide_helper.php
+/.phpstorm.meta.php
