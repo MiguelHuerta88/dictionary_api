@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('word-of-day/{date?}', 'WordController@index');
+Route::get('word-of-day/{date?}', 'WordsController@index');
