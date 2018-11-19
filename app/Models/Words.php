@@ -31,7 +31,7 @@ class Words extends Model
      * @var array
      */
     protected $rules = [
-        'word' => 'required|string|max:255|unique:words,word',
+        'word' => 'required|string|max:255',
         'json_data' => 'required|json',
     ];
 
