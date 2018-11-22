@@ -26,7 +26,7 @@
         --exclude "/storage" \
         --exclude ".htaccess" \
         /home/projec64/deploy/api/ \
-        /home/projec64/public_html/
+        /home/projec64/public_html/api
     echo 'Running Artisan commands'
     php artisan migrate --force
     php artisan up
