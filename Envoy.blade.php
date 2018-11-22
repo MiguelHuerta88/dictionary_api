@@ -3,7 +3,7 @@
 {{-- deploy task --}}
 @task('deploy', ['on' => 'production'])
     echo "Begining to run Envoy script"
-	cd /home/projec64/deploy/
+	cd /home/projec64/deploy/api
 
     echo "Composer command starting:"
 	/opt/cpanel/composer/bin/composer install --no-dev
@@ -14,7 +14,7 @@
     echo "Running gulp"
     /home/projec64/bin/gulp --production --all--}}
 
-	cd /home/projec64/public_html/
+	cd /home/projec64/public_html/api
 	if [ -f ./artisan]
         then
             echo 'Taking Site Down'
@@ -25,8 +25,8 @@
         --exclude ".env" \
         --exclude "/storage" \
         --exclude ".htaccess" \
-        /home/projec64/deploy/ \
-        /home/projec64/public_html
+        /home/projec64/deploy/api \
+        /home/projec64/public_html/api
     echo 'Running Artisan commands'
     php artisan migrate --force
     php artisan up
