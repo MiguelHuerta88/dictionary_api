@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\WordnikWordCommand::class
+        Commands\WordnikWordCommand::class,
+        Commands\PullWordOfDayCommand::class
     ];
 
     /**
@@ -26,9 +27,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->command('wordnik:word')
-            ->dailyAt('01:21')
-            ->appendOutputTo('/logs/wordnik.log');
+        $schedule->command('oxford:word')
+            ->dailyAt('03:15')
+            ->appendOutputTo(storage_path('/logs/oxford.log'));
     }
 
     /**
